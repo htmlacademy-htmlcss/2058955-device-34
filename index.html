@@ -6,31 +6,33 @@
   </head>
   <body>
      <header class="page-header">
-       <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
       <nav class="navigation">
         <a class="navigation-logo"><img class="page-header-logo" alt="Логотип интернет-магазин Девайс" src="#"></a>
         <form  class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
-          <input type="text" name="navigation search" value="Текст поиска">
+          <input type="search" name="navigation search" value="Текст поиска">
           <button class="button-search" type="submit">Найти</button>  
         </form>
         <ul class="navigatior-user-list">
-          <li  class="navigation-user-item navigation-user-auth">
-            <a class="navigation-user-link" href="#">
-              <span>Войти</span>
+          <li  class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-auth" href="#">
+               <span>Войти</span>   
+            </a>
+            <a class="navigation-user-item navigation-user-auth navigation-user-username" href="#" title="Вы вошли как">
+               <span>Коля Петухов</span>
             </a>
           </li>
-          <li  class="navigation-user-item navigation-user-logout">
-            <a class="navigation-user-link" href="#">
+          <li  class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-logout" href="#">
               <span>Выйти</span>
             </a>
           </li>
           <li  class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-user-link navigation-user-compare" href="#">
               <span>Сравнить</span>
             </a>
           </li>
           <li  class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-user-link  navigation-user-cart" href="#">
               <span>Корзина</span>
             </a>
           </li>
@@ -40,7 +42,7 @@
             <a href="#"><span>Каталог</span></a>
             <ol class="navigation-page-catalog-categories">
               <li class="navigation-page-catalog-item"><a href="#"><span>Виртуальная реальность</span></a></li>
-              <li class="navigation-page-catalog-item"><a href="#"><span>Моноподы для селфи</span></a></li>
+              <li class="navigation-page-catalog-item"><a href="catalog.html"><span>Моноподы для селфи</span></a></li>
               <li class="navigation-page-catalog-item"><a href="#"><span>Экшн-камеры</span></a></li>
               <li class="navigation-page-catalog-item"><a href="#"><span>Фитнес-браслеты</span></a></li>
               <li class="navigation-page-catalog-item"><a href="#"><span>Умные часы</span></a></li>
@@ -54,6 +56,7 @@
       </nav>
      </header>
      <main class="main-index">
+      <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
       <section class="preview-slider">
         <h2 class="visually-hidden">Промо слайдер</h2> 
         <div class="preview-slider-description preview-slider-list-current">
@@ -146,7 +149,7 @@
               </a>
             </li>
             <li class="catalog-categories-item">
-              <a href="#">
+              <a href="catalog.html">
                 <figure>
                 <img src="#" width="160" height="160">
                 <figcaption>Моноподы для селфи</figcaption>
@@ -189,52 +192,39 @@
       </section>
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
-        <ol class="services-pagination">
-          <li class="services-pagination-item">
-            <button class="services-pagination-button services-pagination-button-current button-links" type="button">
-              <span>Доставка</span>
-            </button>
-          </li>
-          <li class="services-pagination-item">
-            <button class="services-pagination-button button-links" type="button">
-              <span>Гарантия</span>
-            </button>
-          </li>
-          <li class="services-pagination-item">
-            <button class="services-pagination-button button-links" type="button">
-              <span>Кредит</span>
-            </button>
-          </li>
-        </ol>
-        <ol class="services-description">
-          <li class="services-item">
-            <article class="services-delivery">
-              <h3 class="services-item-name">Доставка</h3>
-              <p class="services-item-description ">Мы с удовольствием доставим ваш товар прямо
-              к вашему подъезду совершенно бесплатно! Ведь
-              мы неплохо заработаем, поднимая его на ваш этаж.
-              </p>
-            </article>
-          </li>
-          <li class="services-item">
-            <article class="services-warranty">
-              <h3 class="services-item-name">Гарантия</h3>
-              <p class="services-item-description ">Если из-за возгорания купленного у нас товара у вас
-              сгорит дом — не переживайте, мы выдадим вам новый.
-              Товар, не дом, конечно же.
-              </p>
-            </article>
-          </li>
-          <li class="services-item">
-            <article class="services-credit">
-              <h3 class="services-item-name">Кредит</h3>
+        <div class="services-tab">
+          <input type="radio" id="services-tab-delivery" name="services-tab-group" checked>
+          <label for="services-tab-delivery" class="services-tab-title">Доставка</label>
+          <article class="services-delivery">
+            <h3 class="services-item-name">Доставка</h3>
+            <p class="services-item-description ">Мы с удовольствием доставим ваш товар прямо
+            к вашему подъезду совершенно бесплатно! Ведь
+            мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+          </article>
+        </div>
+        <div class="services-tab">
+          <input type="radio" id="services-tab-warranty" name="services-tab-group">
+          <label for="services-tab-warranty" class="services-tab-title">Гарантия</label>
+          <article class="services-warranty">
+            <h3 class="services-item-name">Гарантия</h3>
+            <p class="services-item-description ">Если из-за возгорания купленного у нас товара у вас
+            сгорит дом — не переживайте, мы выдадим вам новый.
+            Товар, не дом, конечно же.
+            </p>
+          </article>
+        </div>
+        <div class="services-tab">
+          <input type="radio" id="services-tab-credit" name="services-tab-group">
+          <label for="services-tab-credit" class="services-tab-title">Кредит</label>
+          <article class="services-credit">
+            <h3 class="services-item-name">Кредит</h3>
               <p class="services-item-description ">Залезть в долговую яму стало проще! Кредитные
-                консультанты подберут для вас наиболее выгодные
-                условия кредита. Выгодные для банка, разумеется.
+              консультанты подберут для вас наиболее выгодные
+              условия кредита. Выгодные для банка, разумеется.
               </p>
-            </article>
-          </li>
-        </ol>
+           </article>
+        </div>
       </section>
       <section class="special-delivery-container">
         <a href="" title="открыть форму заказа"><h2 class="special-delivery-title">Доставим редкий товар под заказ</h2></a>
