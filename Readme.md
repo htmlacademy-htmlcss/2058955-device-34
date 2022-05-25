@@ -1,6 +1,6 @@
 # Личный проект «Девайс»
 
-* Студент: [Алексей](https://up.htmlacademy.ru/htmlcss/34/user/2058955).
+* Студент: [Алексей Юрченко](https://up.htmlacademy.ru/htmlcss/34/user/2058955).
 * Наставник: [Роман Марченко](https://htmlacademy.ru/profile/id505487).
 
 ---
